@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'HansKendrick';
+  font-style: normal;
+  font-weight: normal;
+  src: local('HansKendrick'), url('../fonts/hanskendrick.otf') format('otf');
+  src: local('HansKendrick'), url('../fonts/hanskendrick.woff') format('woff');
+  src: local('HansKendrick'), url('../fonts/hanskendrick.woff2') format('woff2');
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -5,14 +15,73 @@ html {
   font-size: 10px;
 }
   
-.container {
-  margin: 0 auto;
-  max-width: 600px;
-  text-align: center;
+body {
+  background-color: #e2e7ec;
+  color: #1d1d1d;
+  /* font-family: 'HansKendrick', sans-serif;      нашёл только regular, отключил, потому что используется вес medium и heavy */
+  font-family: sans-serif;
+  line-height: 3rem;
 }
-  
+
 a {
   text-decoration: none;
   transition: all 0.1s ease-in;
+  color: #1d1d1d;
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 1120px;
+  
+}
+
+.news {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.news__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+  margin: 10px 0;
+  min-height: 540px;
+}
+
+.news__item--big {
+  max-width: 740px;
+}
+
+.news__img {
+  height: 250px;
+}
+
+.news__info {
+  background-color: #fff;
+  padding: 30px;
+  height: 100%;
+  position: relative;
+}
+
+.news__date {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #818181;
+}
+
+.news__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 70px;
+}
+
+.news__author {
+  max-width: 60px;
+  max-height: 60px;
+  overflow: hidden;
+  border-radius: 50px;
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+}
