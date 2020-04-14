@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'Miso';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Miso'), url('../fonts/miso.otf') format('otf');
+  src: local('Miso'), url('../fonts/miso.woff') format('woff');
+  src: local('Miso'), url('../fonts/miso.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Miso Bold';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Miso Bold'), url('../fonts/miso-bold.otf') format('otf');
+  src: local('Miso Bold'), url('../fonts/miso-bold.woff') format('woff');
+  src: local('Miso Bold'), url('../fonts/miso-bold.woff2') format('woff2');
+}
+
 * {
   box-sizing: border-box;
 }
@@ -6,9 +23,15 @@ html {
 }
   
 .container {
+  max-width: 1200px;
   margin: 0 auto;
-  max-width: 600px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdde7e; 
+  padding: 0 30px;
+  flex-wrap: wrap;
+  height: 600px;
 }
   
 a {
@@ -16,3 +39,39 @@ a {
   transition: all 0.1s ease-in;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 440px;
+  width: 360px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.2);
+  transition: height 0.2s ease-in;
+  color: #333333;
+  padding: 40px;
+}
+.card:hover {
+  height: 500px;
+}
+.price {
+  color: #02995b;
+  font-size: 7rem;
+  font-family: 'Miso Bold', sans-serif;
+}
+.icon {
+  margin-left: 20px;
+}
+.title {
+  font-size: 5.6rem;
+  font-family: 'Miso', sans-serif;
+  margin: 0;
+}
+.subtitle {
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  width: 150px;
+}
