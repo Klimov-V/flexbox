@@ -2,11 +2,10 @@
   font-family: 'HansKendrick';
   font-style: normal;
   font-weight: normal;
-  src: local('HansKendrick'), url('../fonts/hanskendrick.otf') format('otf');
-  src: local('HansKendrick'), url('../fonts/hanskendrick.woff') format('woff');
-  src: local('HansKendrick'), url('../fonts/hanskendrick.woff2') format('woff2');
+  src: local('HansKendrick'), url('../fonts/hansKendrick/hanskendrick.otf') format('otf');
+  src: local('HansKendrick'), url('../fonts/hansKendrick/hanskendrick.woff') format('woff');
+  src: local('HansKendrick'), url('../fonts/hansKendrick/hanskendrick.woff2') format('woff2');
 }
-
 
 * {
   box-sizing: border-box;
@@ -18,8 +17,7 @@ html {
 body {
   background-color: #e2e7ec;
   color: #1d1d1d;
-  /* font-family: 'HansKendrick', sans-serif;      нашёл только regular, отключил, потому что используется вес medium и heavy */
-  font-family: sans-serif;
+  font-family: 'HansKendrick', sans-serif;     
   line-height: 3rem;
 }
 
@@ -46,20 +44,28 @@ a {
   flex-direction: column;
   max-width: 360px;
   margin: 10px 0;
-  min-height: 540px;
+  height: 540px;
+  background-color: #fff;
 }
 
-.news__item--big {
-  max-width: 740px;
+.news__item:hover .news__img,
+.news__item:focus .news__img,
+.news__item:active .news__img {
+  transform: scale(1.1);
+  transition: all .3s ease-in;
 }
 
+.news__img-wrap {
+  min-height: 250px;
+  overflow: hidden;
+}
 .news__img {
-  height: 250px;
+  max-width: 100%;
+  transition: all .3s ease-in;
 }
 
 .news__info {
-  background-color: #fff;
-  padding: 30px;
+  padding: 3em;
   height: 100%;
   position: relative;
 }
@@ -72,8 +78,9 @@ a {
 
 .news__title {
   font-size: 2.2rem;
+  line-height: 3rem;
   font-weight: 700;
-  margin-bottom: 70px;
+  margin-top: 0;
 }
 
 .news__author {
@@ -85,3 +92,46 @@ a {
   left: 30px;
   bottom: 30px;
 }
+
+.news__item--big {
+  max-width: 740px;
+  position: relative;
+  color: #fff;
+}
+
+.news__item--big .news__author {
+  display: none;
+}
+
+.news__item--big .news__info {
+  height: auto;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.news__item--big .news__title {
+  font-size: 3rem;
+  line-height: 3.6rem;
+}
+
+.news__item--big .news__img-wrap {
+  max-height: 540px;
+  overflow: hidden;
+}
+
+.news__item--big:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient( rgba(0, 0, 0, .1), rgba(0, 0, 0, .7));
+}
+
+
+
+
