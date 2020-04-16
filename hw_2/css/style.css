@@ -81,6 +81,13 @@ a {
   line-height: 3rem;
   font-weight: 700;
   margin-top: 0;
+  transition: all .3s ease-in;
+}
+.news__item:hover .news__title,
+.news__item:focus .news__title,
+.news__item:active .news__title {
+  opacity: .6;
+  transition: all .3s ease-in;
 }
 
 .news__author {
