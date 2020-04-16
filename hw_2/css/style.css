@@ -84,8 +84,8 @@ a {
 }
 
 .news__author {
-  max-width: 60px;
-  max-height: 60px;
+  max-width: 54px;
+  max-height: 54px;
   overflow: hidden;
   border-radius: 50px;
   position: absolute;
