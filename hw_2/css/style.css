@@ -2,9 +2,9 @@
   font-family: 'HansKendrick';
   font-style: normal;
   font-weight: normal;
-  src: local('HansKendrick'), url('../fonts/hansKendrick/hanskendrick.otf') format('otf');
-  src: local('HansKendrick'), url('../fonts/hansKendrick/hanskendrick.woff') format('woff');
-  src: local('HansKendrick'), url('../fonts/hansKendrick/hanskendrick.woff2') format('woff2');
+  src: local('HansKendrick'), url('../fonts/hanskendrick.otf') format('otf');
+  src: local('HansKendrick'), url('../fonts/hanskendrick.woff') format('woff');
+  src: local('HansKendrick'), url('../fonts/hanskendrick.woff2') format('woff2');
 }
 
 * {
